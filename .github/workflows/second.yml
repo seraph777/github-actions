@@ -1,0 +1,19 @@
+name: Shell Commands
+
+on: [push]
+
+jobs:
+  run-shell-command:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Ecoa um texto
+          run: echo "Olahhh mundo bigodudo !!!!"
+        - name: Script varios comandinhos lindos
+          run: |
+            node -v
+            npm -v
+        - name: Comandos Pitonicos
+          run: |
+            import platform
+            print(platform.processor())
+         shell: python
