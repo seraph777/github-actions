@@ -5,18 +5,19 @@ on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
-      steps:
-        - name: Ecoa um texto
-          run: echo "Olahhh mundo bigodudo !!!!"
-        - name: Script varios comandinhos lindos
-          run: |
-            node -v
-            npm -v
-        - name: Comandos Pitonicos
-          run: |
-            import platform
-            print(platform.processor())
-          shell: python
+    steps:
+      - name: Ecoa um texto
+        run: echo "Olahhh mundo bigodudo !!!!"
+        timeout-minutes: 0
+      - name: Script varios comandinhos lindos
+        run: |
+          node -v
+          npm -v
+      - name: Comandos Pitonicos
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
   run-windows-command:
     runs-on: windows-latest
     needs: ["run-shell-command"]
