@@ -6,6 +6,10 @@ jobs:
   run-github-action:
     runs-on: ubuntu-latest
     steps:
+      - name: Lista arquivos
+        run: |
+          pwd
+          ls
       - name: JS Action Simples
         id: grret
         uses: actions/hello-world-javascript-action@v1
